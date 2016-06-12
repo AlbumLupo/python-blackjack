@@ -1,6 +1,8 @@
 shoe = []
+burn = []
 player_1 = []
-number_of_decks = 2
+dealer = []
+number_of_decks = 1
 import random
 
 def shuffle(x):
@@ -23,7 +25,24 @@ def shuffle(x):
             suit = "spades"
             face = 1
             decks += 1
+    else:
+        random.shuffle(shoe)
 
 shuffle(number_of_decks)
+def deal_1():
+    player_1_count = 0
+    player_1.append(shoe.pop())
+    player_1_count = player_1_count + player_1[0][0]
+    player_1.append(shoe.pop())
+    player_1_count = player_1_count + player_1[1][0]
+    burn.append (shoe.pop())
 
-print (shoe)
+deal_1()
+
+dealer.append(shoe.pop())
+dealer.append(shoe.pop())
+
+print "Player 1: " + str(player_1)
+print player_1_count
+print
+print "Dealer: " + str (dealer)
