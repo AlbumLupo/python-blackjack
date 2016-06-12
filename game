@@ -1,6 +1,7 @@
 shoe = []
 burn = []
 player_1 = []
+player_1_count = 0
 dealer = []
 number_of_decks = 1
 import random
@@ -30,6 +31,7 @@ def shuffle(x):
 
 shuffle(number_of_decks)
 def deal_1():
+    global player_1_count
     player_1_count = 0
     player_1.append(shoe.pop())
     player_1_count = player_1_count + player_1[0][0]
@@ -39,10 +41,14 @@ def deal_1():
 
 deal_1()
 
+print "Player 1: " + str(player_1)
+print "Player 1 total: " + str(player_1_count)
+
 dealer.append(shoe.pop())
 dealer.append(shoe.pop())
 
-print "Player 1: " + str(player_1)
-print player_1_count
+
 print
-print "Dealer: " + str (dealer)
+print "Dealer: " + str (dealer[0])
+print
+print player_1_count
