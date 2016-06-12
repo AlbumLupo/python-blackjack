@@ -26,4 +26,4 @@ def shuffle(x):
 
 shuffle(number_of_decks)
 
-print shoe
+print (shoe)
