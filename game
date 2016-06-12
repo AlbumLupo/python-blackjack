@@ -1,0 +1,29 @@
+shoe = []
+player_1 = []
+number_of_decks = 2
+import random
+
+def shuffle(x):
+    suit = "spades"
+    face = 1
+    decks = 1
+    while decks <= x:
+        shoe.append([(face), (suit)])
+        face += 1
+        if face == 14 and suit == "spades":
+            suit = "hearts"
+            face = 1
+        if face == 14 and suit == "hearts":
+            suit = "clubs"
+            face = 1
+        if face == 14 and suit == "clubs":
+            suit = "diamonds"
+            face = 1
+        if face == 14 and suit == "diamonds":
+            suit = "spades"
+            face = 1
+            decks += 1
+
+shuffle(number_of_decks)
+
+print shoe
